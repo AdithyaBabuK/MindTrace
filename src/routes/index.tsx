@@ -65,9 +65,8 @@ function Index() {
   useEffect(() => {
     setEntries(sortEntries(loadEntries()));
     const savedTheme = window.localStorage.getItem("mindtrace.theme");
-    const isDark =
-      savedTheme === "dark" ||
-      (savedTheme === null && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    const isDark = savedTheme !== "light";
+
     setDark(isDark);
     document.documentElement.classList.toggle("dark", isDark);
     setReady(true);
@@ -235,7 +234,7 @@ function Index() {
           </div>
 
           {filtered.length === 0 ? (
-            <p className="mt-10 rounded-2xl border border-dashed border-border py-16 text-center text-muted-foreground">
+            <p className="glass mt-10 rounded-3xl py-16 text-center text-muted-foreground">
               {entries.length === 0
                 ? "No entries yet — the first page is always the hardest."
                 : "Nothing matches those filters."}
@@ -270,7 +269,7 @@ function Stat({
   icon?: React.ReactNode;
 }) {
   return (
-    <div className="rounded-xl border border-border bg-card px-4 py-3">
+    <div className="glass rounded-2xl px-4 py-3">
       <dt className="text-xs tracking-wide text-muted-foreground uppercase">{label}</dt>
       <dd className="mt-1 flex items-center gap-2 font-display text-2xl font-semibold tracking-tight">
         {icon}
