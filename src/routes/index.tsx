@@ -154,16 +154,11 @@ function Index() {
                 <Switch checked={dark} onCheckedChange={setDark} aria-label="Toggle dark mode" />
                 <Moon className="size-4" />
               </label>
-              <Button
-                variant="outline"
-                className="gap-2"
-                onClick={() => {
-                  exportEntries(entries);
-                  toast.success("Entries exported");
-                }}
-              >
-                <Download className="size-4" /> Export
-              </Button>
+              <ExportMenu
+                entries={entries}
+                onImport={(imported) => persist([...entries, ...imported])}
+              />
+
             </div>
           </div>
 
