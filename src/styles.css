@@ -94,6 +94,7 @@
   --glass-tint: oklch(1 0 0 / 55%);
   --glass-edge: oklch(1 0 0 / 70%);
   --glass-shadow: 0 20px 45px -22px oklch(0.3 0.08 320 / 45%);
+  --wallpaper-opacity: 0.22;
 }
 
 .dark {
@@ -139,6 +140,7 @@
   --glass-tint: oklch(1 0 0 / 7%);
   --glass-edge: oklch(1 0 0 / 18%);
   --glass-shadow: 0 24px 50px -24px oklch(0 0 0 / 70%);
+  --wallpaper-opacity: 0.85;
 }
 
 @layer base {
