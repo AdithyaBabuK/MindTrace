@@ -10,9 +10,10 @@ export function AuroraBackground() {
         alt=""
         width={1920}
         height={1088}
-        className="absolute inset-0 h-full w-full object-cover opacity-70 dark:opacity-80"
+        className="absolute inset-0 h-full w-full object-cover opacity-45"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--background)_0%,color-mix(in_oklab,var(--background),transparent_35%)_45%,transparent_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,color-mix(in_oklab,var(--background),transparent_45%)_0%,color-mix(in_oklab,var(--background),transparent_15%)_60%,var(--background)_100%)]" />
+
       <div className="grid-overlay absolute inset-0" />
       <div className="aurora-blob animate-drift-a absolute -top-32 -left-24 size-[46rem] bg-[var(--glow-1)]" />
       <div className="aurora-blob animate-drift-b absolute top-1/3 -right-40 size-[40rem] bg-[var(--glow-2)]" />
