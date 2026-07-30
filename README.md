@@ -1,1 +1,1 @@
-# Mindful Moments
+# MindTrace - A Digital Journal App
