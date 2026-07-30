@@ -56,7 +56,7 @@ export function EntryForm({
   return (
     <form
       onSubmit={submit}
-      className="rounded-2xl border border-border bg-card p-6 shadow-sm sm:p-7"
+      className="glass-panel rounded-3xl p-6 sm:p-7"
     >
       <div className="mb-6 flex items-start justify-between gap-4">
         <div>
@@ -148,7 +148,7 @@ export function EntryForm({
             placeholder="Start writing…"
             value={form.content}
             onChange={(e) => setForm({ ...form, content: e.target.value })}
-            className="ruled-paper resize-y bg-paper leading-8 font-display text-[1.02rem]"
+            className="glass ruled-paper resize-y font-display text-[1.02rem] leading-8"
           />
         </div>
       </div>

@@ -25,8 +25,10 @@ import {
   topMood,
   type Entry,
 } from "@/lib/journal";
+import { AuroraBackground } from "@/components/journal/AuroraBackground";
 import { Download, Flame, Moon, NotebookPen, Search, Sun } from "lucide-react";
 import { toast } from "sonner";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -63,9 +65,8 @@ function Index() {
   useEffect(() => {
     setEntries(sortEntries(loadEntries()));
     const savedTheme = window.localStorage.getItem("mindtrace.theme");
-    const isDark =
-      savedTheme === "dark" ||
-      (savedTheme === null && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    const isDark = savedTheme !== "light";
+
     setDark(isDark);
     document.documentElement.classList.toggle("dark", isDark);
     setReady(true);
@@ -129,9 +130,11 @@ function Index() {
   const dominant = useMemo(() => topMood(entries), [entries]);
 
   return (
-    <div className="min-h-screen">
-      <header className="border-b border-border bg-paper">
+    <div className="relative min-h-screen">
+      <AuroraBackground />
+      <header className="glass sticky top-0 z-30 rounded-none border-x-0 border-t-0">
         <div className="mx-auto max-w-6xl px-5 py-8 sm:px-8 sm:py-10">
+
           <div className="flex flex-wrap items-start justify-between gap-5">
             <div>
               <p className="flex items-center gap-2 text-xs font-medium tracking-[0.18em] text-accent uppercase">
@@ -231,7 +234,7 @@ function Index() {
           </div>
 
           {filtered.length === 0 ? (
-            <p className="mt-10 rounded-2xl border border-dashed border-border py-16 text-center text-muted-foreground">
+            <p className="glass mt-10 rounded-3xl py-16 text-center text-muted-foreground">
               {entries.length === 0
                 ? "No entries yet — the first page is always the hardest."
                 : "Nothing matches those filters."}
@@ -266,7 +269,7 @@ function Stat({
   icon?: React.ReactNode;
 }) {
   return (
-    <div className="rounded-xl border border-border bg-card px-4 py-3">
+    <div className="glass rounded-2xl px-4 py-3">
       <dt className="text-xs tracking-wide text-muted-foreground uppercase">{label}</dt>
       <dd className="mt-1 flex items-center gap-2 font-display text-2xl font-semibold tracking-tight">
         {icon}

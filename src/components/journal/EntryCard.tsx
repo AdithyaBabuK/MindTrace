@@ -5,7 +5,7 @@ export function EntryCard({ entry, onOpen }: { entry: Entry; onOpen: () => void 
   return (
     <button
       onClick={onOpen}
-      className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 text-left shadow-sm transition-all hover:-translate-y-0.5 hover:border-accent/50 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      className="glass-panel group flex h-full flex-col rounded-2xl p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
     >
       <div className="flex items-start justify-between gap-3">
         <span className="rounded-full bg-secondary px-2.5 py-1 text-xs font-medium tracking-wide text-secondary-foreground uppercase">

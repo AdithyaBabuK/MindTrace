@@ -33,7 +33,7 @@ export function EntryDetail({
 }) {
   return (
     <Dialog open={!!entry} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="max-h-[88vh] gap-0 overflow-y-auto sm:max-w-2xl">
+      <DialogContent className="glass-panel max-h-[88vh] gap-0 overflow-y-auto rounded-3xl sm:max-w-2xl">
         {entry && (
           <>
             <DialogHeader className="text-left">
