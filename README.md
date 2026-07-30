@@ -1,6 +1,6 @@
 # 🧠 MindTrace — Personal Digital Journal & Mood Tracker
 
-> **MindTrace** is a private, local-first, aesthetic digital journal and mood tracker built with **React 19**, **TypeScript**, **TanStack Start / TanStack Router**, **Tailwind CSS v4**, and **Vite**. 
+> **MindTrace** is a private, local-first, aesthetic digital journal built with **React 19**, **TypeScript**, **TanStack Start / TanStack Router**, **Tailwind CSS v4**, and **Vite**. 
 
 All your entries, thoughts, and mood analytics remain 100% private and stored locally inside your browser (`localStorage`).
 
