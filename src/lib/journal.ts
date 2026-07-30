@@ -15,7 +15,7 @@ export const CATEGORIES: Category[] = ["Personal", "Work", "Ideas", "Reflection"
 
 export const MOODS: { id: MoodId; emoji: string; label: string }[] = [
   { id: "happy", emoji: "😊", label: "Happy" },
-  { id: "calm", emoji: "🌿", label: "Calm" },
+  { id: "calm", emoji: "😌", label: "Calm" },
   { id: "anxious", emoji: "😰", label: "Anxious" },
   { id: "sad", emoji: "😔", label: "Sad" },
   { id: "energetic", emoji: "⚡", label: "Energetic" },
