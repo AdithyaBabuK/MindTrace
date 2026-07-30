@@ -25,8 +25,10 @@ import {
   topMood,
   type Entry,
 } from "@/lib/journal";
+import { AuroraBackground } from "@/components/journal/AuroraBackground";
 import { Download, Flame, Moon, NotebookPen, Search, Sun } from "lucide-react";
 import { toast } from "sonner";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -129,9 +131,11 @@ function Index() {
   const dominant = useMemo(() => topMood(entries), [entries]);
 
   return (
-    <div className="min-h-screen">
-      <header className="border-b border-border bg-paper">
+    <div className="relative min-h-screen">
+      <AuroraBackground />
+      <header className="glass sticky top-0 z-30 rounded-none border-x-0 border-t-0">
         <div className="mx-auto max-w-6xl px-5 py-8 sm:px-8 sm:py-10">
+
           <div className="flex flex-wrap items-start justify-between gap-5">
             <div>
               <p className="flex items-center gap-2 text-xs font-medium tracking-[0.18em] text-accent uppercase">
