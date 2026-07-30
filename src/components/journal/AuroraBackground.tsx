@@ -10,8 +10,9 @@ export function AuroraBackground() {
         alt=""
         width={1920}
         height={1080}
-        className="absolute inset-0 h-full w-full object-cover opacity-80"
+        className="absolute inset-0 h-full w-full object-cover opacity-[var(--wallpaper-opacity)]"
       />
+
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,color-mix(in_oklab,var(--background),transparent_70%)_0%,color-mix(in_oklab,var(--background),transparent_45%)_60%,color-mix(in_oklab,var(--background),transparent_20%)_100%)]" />
 
 
