@@ -17,7 +17,7 @@ import {
   CATEGORIES,
   MOODS,
   computeStreak,
-  exportEntries,
+
   loadEntries,
   plainText,
   saveEntries,
