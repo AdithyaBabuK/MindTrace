@@ -1,4 +1,4 @@
-import wallpaper from "@/assets/blossom-wallpaper.jpg";
+import wallpaper from "@/assets/blossom-night.png.asset.json";
 import { PetalField } from "./PetalField";
 
 export function AuroraBackground() {
@@ -6,13 +6,14 @@ export function AuroraBackground() {
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
       <div className="absolute inset-0 bg-background" />
       <img
-        src={wallpaper}
+        src={wallpaper.url}
         alt=""
         width={1920}
-        height={1088}
-        className="absolute inset-0 h-full w-full object-cover opacity-45"
+        height={1080}
+        className="absolute inset-0 h-full w-full object-cover opacity-80"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,color-mix(in_oklab,var(--background),transparent_45%)_0%,color-mix(in_oklab,var(--background),transparent_15%)_60%,var(--background)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom,color-mix(in_oklab,var(--background),transparent_70%)_0%,color-mix(in_oklab,var(--background),transparent_45%)_60%,color-mix(in_oklab,var(--background),transparent_20%)_100%)]" />
+
 
       <div className="grid-overlay absolute inset-0" />
       <div className="aurora-blob animate-drift-a absolute -top-32 -left-24 size-[46rem] bg-[var(--glow-1)]" />
