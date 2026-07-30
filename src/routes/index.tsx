@@ -17,7 +17,7 @@ import {
   CATEGORIES,
   MOODS,
   computeStreak,
-  exportEntries,
+
   loadEntries,
   plainText,
   saveEntries,
@@ -26,8 +26,10 @@ import {
   type Entry,
 } from "@/lib/journal";
 import { AuroraBackground } from "@/components/journal/AuroraBackground";
-import { Download, Flame, Moon, NotebookPen, Search, Sun } from "lucide-react";
+import { ExportMenu } from "@/components/journal/ExportMenu";
+import { Flame, Moon, NotebookPen, Search, Sun } from "lucide-react";
 import { toast } from "sonner";
+
 
 
 export const Route = createFileRoute("/")({
@@ -132,7 +134,7 @@ function Index() {
   return (
     <div className="relative min-h-screen">
       <AuroraBackground />
-      <header className="glass sticky top-0 z-30 rounded-none border-x-0 border-t-0">
+      <header className="glass relative z-30 rounded-none border-x-0 border-t-0">
         <div className="mx-auto max-w-6xl px-5 py-8 sm:px-8 sm:py-10">
 
           <div className="flex flex-wrap items-start justify-between gap-5">
@@ -154,16 +156,11 @@ function Index() {
                 <Switch checked={dark} onCheckedChange={setDark} aria-label="Toggle dark mode" />
                 <Moon className="size-4" />
               </label>
-              <Button
-                variant="outline"
-                className="gap-2"
-                onClick={() => {
-                  exportEntries(entries);
-                  toast.success("Entries exported");
-                }}
-              >
-                <Download className="size-4" /> Export
-              </Button>
+              <ExportMenu
+                entries={entries}
+                onImport={(imported) => persist([...entries, ...imported])}
+              />
+
             </div>
           </div>
 
