@@ -26,8 +26,10 @@ import {
   type Entry,
 } from "@/lib/journal";
 import { AuroraBackground } from "@/components/journal/AuroraBackground";
-import { Download, Flame, Moon, NotebookPen, Search, Sun } from "lucide-react";
+import { ExportMenu } from "@/components/journal/ExportMenu";
+import { Flame, Moon, NotebookPen, Search, Sun } from "lucide-react";
 import { toast } from "sonner";
+
 
 
 export const Route = createFileRoute("/")({
